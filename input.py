@@ -7,6 +7,7 @@ Reads a singular character and then executes something based on that character
 
 Keybinds:
 
+Q:          Quit the game
 E:          Open inventory
 M:          Open map
 S:          Open shop (TODO)
@@ -19,10 +20,13 @@ ARROW KEYS:
 def read_input(game: Game, player: Player):
     key = readchar.readkey()
 
+    if key == "q":
+        quit(0)
+
     # Switching Modes
-    if key == "e":
+    elif key == "e":
         game.mode = Mode.INVENTORY
-    if key == "m" or key == readchar.key.ESC:
+    elif key == "m" or key == readchar.key.ESC:
         game.mode = Mode.MAP
     
     # MAP mode keybinds
