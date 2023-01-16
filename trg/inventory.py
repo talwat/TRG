@@ -2,8 +2,8 @@
 For displaying and managing the inventory menu
 """
 
-from game import Game
-from player import Player
+from trg.game import Game
+from trg.player import Player
 
 
 def render_inventory(game: Game, player: Player):

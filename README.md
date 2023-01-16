@@ -19,7 +19,7 @@ pip install -r requirements.txt
 And finally run the program by doing:
 
 ```sh
-python main.py
+python -m trg
 ```
 
 **Note**: Substitute `python` and `pip` with whatever your python and pip are called.

@@ -4,7 +4,8 @@ For managing the game state & information
 
 from enum import Enum
 from shutil import get_terminal_size
-from type import Map
+
+from trg.type import Map
 
 
 class Mode(Enum):

@@ -2,14 +2,10 @@
 Main file for TRG
 """
 
-from player import Player
-from game import Game, Mode
+from trg.player import Player
+from trg.game import Game, Mode
 
-import game_map
-import terminal
-import inventory
-import game_input
-
+from trg import game_map, terminal, inventory, game_input
 
 def main():
     """

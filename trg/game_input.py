@@ -3,8 +3,9 @@ For capturing user input and then executing code based on that input
 """
 
 import readchar
-from game import Mode, Game
-from player import Player
+
+from trg.game import Mode, Game
+from trg.player import Player
 
 
 def read_input(game: Game, player: Player):
@@ -13,6 +14,7 @@ def read_input(game: Game, player: Player):
 
     Keybinds:
 
+    Q:          Quit the game
     E:          Open inventory
     M:          Open map
     S:          Open shop (TODO)
@@ -25,10 +27,14 @@ def read_input(game: Game, player: Player):
 
     key = readchar.readkey()
 
+    # Quit
+    if key == "q":
+        quit(0)
+
     # Switching Modes
-    if key == "e":
+    elif key == "e":
         game.mode = Mode.INVENTORY
-    if key == "m":
+    elif key == "m":
         game.mode = Mode.MAP
 
     # MAP mode keybinds

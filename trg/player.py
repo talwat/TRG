@@ -2,8 +2,7 @@
 Contains the player class & any other player logic
 """
 
-from game import Game
-
+from trg.game import Game
 
 class Player:
     """

@@ -3,22 +3,30 @@ For managing the game map & camera
 """
 
 import math
-import terminal
-from game import Game
-from player import Player
-from type import Map
+from importlib.resources import files
+import os
+
+import trg.terminal
+from trg.game import Game
+from trg.player import Player
+from trg.type import Map
 
 
 def read_map() -> str:
     """
-    Reads the map text file (`data/map.txt`)
+    Reads the map text file (`map.txt`)
 
     MASSIVE WARNING: USE A RECTANGULAR MAP. NON RECTANGULAR MAPS BREAK EVERYHING
     """
 
-    with open("data/map.txt", "r", encoding="UTF-8") as file:
+    path = os.path.join(os.path.dirname(__file__), 'data', 'map.txt')
+
+    with open(path, "r", encoding="UTF-8") as file:
         content = file.read()
         return content.strip("\n")
+
+    # content = files("trg.data").joinpath('map.txt').read_text()
+    # return content.strip("\n")
 
 
 def parse_map(raw_map: str) -> Map:
@@ -144,7 +152,7 @@ def render_map(game: Game, player: Player):
 
     # Clearing after we have already calculated the map to reduce the flashing,
     # so we can just display the old map while the new one is rendering
-    terminal.clear()
+    trg.terminal.clear()
 
     # NOTE: This will produce a trailing newline (\n at the end of the output)
     # This is to prevent cursor flicker on some terminals
