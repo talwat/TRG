@@ -1,0 +1,4 @@
+[MESSAGES CONTROL]
+disable=trailing-whitespace,
+        unused-argument,
+        too-few-public-methods
