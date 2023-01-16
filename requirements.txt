@@ -3,3 +3,4 @@ readchar
 # Dev dependencies
 # pylint
 # flake8
+# black
