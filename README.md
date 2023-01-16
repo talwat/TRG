@@ -2,7 +2,33 @@
 
 A terminal game
 
-## Setup
+## Installation
+
+Simply use pip and run:
+
+```sh
+pip install trg-game
+```
+
+and then to run the game do:
+
+```sh
+trg
+```
+
+Note: If that doesn't work you can try:
+
+```sh
+python -m trg
+```
+
+or:
+
+```sh
+python3 -m trg
+```
+
+## Development Setup
 
 Just make a venv by running:
 
