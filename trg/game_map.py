@@ -3,7 +3,6 @@ For managing the game map & camera
 """
 
 import math
-from importlib.resources import files
 import os
 
 import trg.terminal

@@ -16,7 +16,7 @@ def main():
     player = Player()
 
     print("======================")
-    print(" TRG, by Tal & Henri")
+    print("    TRG, by Talwat")
     print("======================")
     input("Press enter to begin")
 
